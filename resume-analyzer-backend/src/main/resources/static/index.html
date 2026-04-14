@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+  <div class="floating-shape shape4"></div>
+
+  <div class="page">
+    <header class="hero">
+      <div class="hero-badge">AI Powered Resume Intelligence</div>
+      <h1>Smart Resume Analyzer</h1>
+      <p>
+        Upload your resume, compare it with your target role, and get ATS score,
+        skill gap analysis, roadmap, and AI-based feedback.
+      </p>
+    </header>
+
+    <main class="main-container">
+      <section class="card form-card">
+        <div class="card-top">
+          <h2>Analyze Your Resume</h2>
+          <p class="section-subtext">Upload your resume and type your target role.</p>
+        </div>
+
+        <form id="resumeForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Your Name</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="role">Target Role</label>
+              <input
+                type="text"
+                id="role"
+                list="roleOptions"
+                placeholder="Select or type target role"
+              />
+              <datalist id="roleOptions">
+                <option value="Frontend Developer"></option>
+                <option value="Backend Developer"></option>
+                <option value="Full Stack Developer"></option>
+                <option value="Java Developer"></option>
+                <option value="Python Developer"></option>
+                <option value="React Developer"></option>
+                <option value="Node.js Developer"></option>
+                <option value="Software Engineer"></option>
+                <option value="Web Developer"></option>
+                <option value="Data Analyst"></option>
+                <option value="UI/UX Designer"></option>
+                <option value="QA Engineer"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="resumeFile">Upload Resume</label>
+            <div class="upload-box">
+              <input type="file" id="resumeFile" accept=".pdf" />
+              <div class="upload-content">
+                <div class="upload-icon">📄</div>
+                <h3>Choose your resume file</h3>
+                <p>Accepted format: PDF only</p>
+                <span id="fileNameText">No file selected</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="jobDescription">Paste Job Description</label>
+            <textarea
+              id="jobDescription"
+              rows="9"
+              placeholder="Paste the job description here..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="analyze-btn">
+            <span class="btn-text">Analyze Resume</span>
+          </button>
+
+          <p id="errorMsg" class="error-msg"></p>
+        </form>
+      </section>
+
+      <section class="card feature-card">
+        <div class="card-top">
+          <h2>What This Project Checks</h2>
+          <p class="section-subtext">Modern resume analysis with AI support</p>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item feature-blue">
+            <div class="feature-icon">🎯</div>
+            <div>
+              <h3>Resume Match Score</h3>
+              <p>Checks how well your resume fits the selected role.</p>
+            </div>
+          </div>
+
+          <div class="feature-item feature-orange">
+            <div class="feature-icon">📊</div>
+            <div>
+              <h3>ATS Score</h3>
+              <p>Shows how ATS-friendly your resume looks.</p>
+            </div>
+          </div>
+
+          <div class="feature-item feature-purple">
+            <div class="feature-icon">🧠</div>
+            <div>
+              <h3>Skill Gap Analysis</h3>
+              <p>Finds matched skills and missing skills from the job description.</p>
+            </div>
+          </div>
+
+          <div class="feature-item feature-green">
+            <div class="feature-icon">🚀</div>
+            <div>
+              <h3>4-Week Roadmap</h3>
+              <p>Gives a clean weekly learning roadmap to improve your profile.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

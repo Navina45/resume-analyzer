@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Analysis Result</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+  <div class="floating-shape shape4"></div>
+
+  <div class="result-container" id="resultPage">
+    <div class="result-header">
+      <div class="hero-badge">Analysis Complete</div>
+      <h1>Resume Analysis Result</h1>
+      <p>Your smart report is ready.</p>
+    </div>
+
+    <div class="result-grid">
+      <div class="result-card summary-card">
+        <div class="summary-avatar">👤</div>
+        <div>
+          <h2>Candidate Summary</h2>
+          <p><strong>Name:</strong> <span id="candidateName"></span></p>
+          <p><strong>Target Role:</strong> <span id="targetRole"></span></p>
+          <p><strong>Uploaded File:</strong> <span id="uploadedFile"></span></p>
+        </div>
+      </div>
+
+      <div class="result-card score-highlight match-card">
+        <h2>Resume Score</h2>
+        <div class="big-score" id="matchScore"></div>
+        <p>Overall role fit</p>
+      </div>
+
+      <div class="result-card score-highlight ats-card">
+        <h2>ATS Score</h2>
+        <div class="big-score" id="atsScore"></div>
+        <p>ATS readiness score</p>
+      </div>
+
+      <div class="result-card chart-card">
+        <h2>Skills Overview</h2>
+        <div class="small-chart-box">
+          <canvas id="skillsDonutChart"></canvas>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <h2>Skills Found</h2>
+        <div class="tag-container" id="foundSkills"></div>
+      </div>
+
+      <div class="result-card">
+        <h2>Matched Skills</h2>
+        <div class="tag-container" id="matchedSkills"></div>
+      </div>
+
+      <div class="result-card">
+        <h2>Missing Skills</h2>
+        <div class="tag-container" id="missingSkills"></div>
+      </div>
+
+      <div class="result-card">
+        <h2>Why Rejected?</h2>
+        <ul class="list-box" id="rejectionReasons"></ul>
+      </div>
+
+      <div class="result-card">
+        <h2>Suggestions to Improve</h2>
+        <ul class="list-box" id="suggestions"></ul>
+      </div>
+
+      <div class="result-card full-width">
+        <h2>4-Week Learning Roadmap</h2>
+        <div id="roadmapBox"></div>
+      </div>
+
+      <div class="result-card full-width">
+        <h2>AI Analysis</h2>
+        <div id="aiAnalysisBox" class="resume-text-box">Loading AI analysis...</div>
+      </div>
+
+      <div class="result-card full-width">
+        <h2>Extracted Resume Text</h2>
+        <div id="resumeTextBox" class="resume-text-box"></div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
